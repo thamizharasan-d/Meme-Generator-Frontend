@@ -1,0 +1,42 @@
+.Header{
+    background: linear-gradient(300deg,#00f2fe,#a619f8);
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+}
+#img{
+    margin-left: 30px;
+    height: 60px;
+    width: 60px;
+    border-radius: 15px;
+}
+#he1{
+    margin-left: 30px;
+    color: aliceblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transform: scale(0.5);
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+}
+#h41{
+    color: rgb(255, 255, 255);
+    margin-left: 850px;
+    transform: scale(0.5);
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+}
+#h42{
+    color: rgb(255, 255, 255);
+    margin-left: 30px;
+    transform: scale(0.5);
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+}
+@keyframes zoomIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
