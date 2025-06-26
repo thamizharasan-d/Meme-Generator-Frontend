@@ -13,19 +13,19 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   try {
     const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/signup`, form);
-    console.log("Signup success:", res.data);
+    console.log("Signup success:", response.data);
     alert("Signup successful!");
     navigate("/");
   } catch (err) {
     console.error("Signup failed:", err);
     if (err.response) {
-      console.error("Error response from backend:", err.response.data);
-      alert(err.response.data.message); 
+      alert(err.response.data.message);
     } else {
       alert("Signup failed: No server response.");
     }
   }
 };
+
 
   return (
     <div>

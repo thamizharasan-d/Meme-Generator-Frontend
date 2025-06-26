@@ -8,17 +8,17 @@ import { useNavigate } from "react-router-dom";
 function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
   const navigate = useNavigate();
-    const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, form);
-      navigate("/Home");
-      alert(`Welcome, ${res.data.user.name}`);
-      localStorage.setItem("token", res.data.token);
-    } catch (err) {
-      alert(err.response?.data?.message || "Login failed");
-    }
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, form);
+    localStorage.setItem("token", response.data.token);
+    alert(`Welcome, ${response.data.user.name}`);
+    navigate("/Home");
+  } catch (err) {
+    alert(err.response?.data?.message || "Login failed");
+  }
+};
   return (
   <div>
     <Header/>  
